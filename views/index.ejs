@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<div class="container-fluid">
+
+    <div class="jumbotron">
+        <h1>Available Decks</h1>
+        <p class="text-right">
+            <a class="btn btn-info btn-sm" href="/decks/new">Add New Deck</a>
+            <a class="btn btn-dark btn-sm" href="#">Settings</a>
+        </p>
+    </div>
+    <!--List every deck of cards in the database-->
+    
+     <div class="row" id="card-row">
+        <!-- Load Decks Dynamically -->
+        <% decks.forEach((deck) => { %>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card deck-block">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= deck.subject %>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%= deck.subtitle %></h6>
+                        <p class="card-text"> <%= deck.description %></p>
+                        <div class="text-center">
+                            <a href="/decks/<%= deck._id %>" class="btn btn-primary btn-sm">View Deck</a>
+                            <a class="btn btn-secondary btn-sm" href="/decks/<%= deck._id %>/edit">
+                                Edit <i class="fas fa-edit icontrol"></i>
+                            </a>
+                            <form id="form_delete"action="/decks/<%= deck._id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    Delete <i class="fas fa-trash-alt icontrol"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+</div>
+
+<%- include('partials/footer') %>

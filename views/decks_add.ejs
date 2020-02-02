@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <h2 class="form-header">Create New Deck</h2>
+    <div class=" container formAddUpdate">
+        <form action="/decks" method="POST">
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Enter a Subject-eg, Math">
+            </div>
+            <div class="form-group">
+                <label>Subtitle</label>
+                <input type="text" class="form-control" id="inputSubtitle" name="subtitle" placeholder="Enter a Subtitle-eg, Section 2">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" id="inputDescription" name="description" placeholder="Enter a Description-eg, rules of exponents and logarithms"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create</button>
+            <a href="/decks" class="btn btn-secondary btn-block">Back</a>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') %>

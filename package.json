@@ -1,0 +1,20 @@
+{
+  "name": "cramitcards",
+  "version": "1.0.0",
+  "description": "Flash card maker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.10",
+    "mongoose-sequence": "^5.2.2"
+  }
+}

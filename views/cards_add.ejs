@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <h2 class="form-header">Add Card to <%= deck.subject %></h2>
+    <div class=" container formAddUpdate">
+        <form action="/decks/<%= deck._id %>/cards" method="POST">
+            <div class="form-group">
+                <label>Question</label>
+                <input type="text" class="form-control" id="inputQuestion" name="card[question]" placeholder="Enter a question">
+            </div>
+            <div class="form-group">
+                <label>Answer</label>
+                <input type="text" class="form-control" id="inputAnswer" name="card[answer]" placeholder="Enter an answer">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Card</button>
+            <a href="/decks" class="btn btn-secondary btn-block">Back</a>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') %>
