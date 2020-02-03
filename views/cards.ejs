@@ -12,47 +12,49 @@
             <p><a class="btn btn-success btn-sm" href="/decks/<%= deck._id %>/cards/new"><i class="fas fa-plus"></i> Add Card</a></p>
         </div>
         <!--On Page Load-->
-        <div class="col-md-10">
-            <div id="card-id<%= deck.cards[0].card_id %>-init" class="card-deck">
-                <div id="card-question" class="card">
-                    <div class="card-header">
-                        Question
+        <% if(deck.cards[0]) { %>
+            <div class="col-md-10">
+                <div id="card-id<%= deck.cards[0].card_id %>-init" class="card-deck">
+                    <div id="card-question" class="card">
+                        <div class="card-header">
+                            Question
+                        </div>
+                        <div class="card-body">
+                            <p class="q_text"><%= deck.cards[0].question%></p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p class="q_text"><%= deck.cards[0].question%></p>
-                    </div>
-                </div>
-                <div id="card-answer" class="card">
-                    <div class="card-header">
-                        Answer
-                    </div>
-                    <div class="card-body">
-                        <p class="a_text"><%= deck.cards[0].answer %></p>
-                    </div>
-                </div>
-            </div>
-        <!---------------->
-        
-        <% deck.cards.forEach((card) => { %>
-            <div id="card-id<%= card.card_id %>"class="card-deck card-divs">
-                <div id="card-question" class="card">
-                    <div class="card-header">
-                        Question
-                    </div>
-                    <div class="card-body">
-                        <p class="q_text"><%= card.question%></p>
+                    <div id="card-answer" class="card">
+                        <div class="card-header">
+                            Answer
+                        </div>
+                        <div class="card-body">
+                            <p class="a_text"><%= deck.cards[0].answer %></p>
+                        </div>
                     </div>
                 </div>
-                <div id="card-answer" class="card">
-                    <div class="card-header">
-                        Answer
+            <!---------------->
+            
+            <% deck.cards.forEach((card) => { %>
+                <div id="card-id<%= card.card_id %>"class="card-deck card-divs">
+                    <div id="card-question" class="card">
+                        <div class="card-header">
+                            Question
+                        </div>
+                        <div class="card-body">
+                            <p class="q_text"><%= card.question%></p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p class="a_text"><%= card.answer %></p>
+                    <div id="card-answer" class="card">
+                        <div class="card-header">
+                            Answer
+                        </div>
+                        <div class="card-body">
+                            <p class="a_text"><%= card.answer %></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <% }) %>
+            <% }) %>
+        <% } %> 
         </div>
     </div>
     
