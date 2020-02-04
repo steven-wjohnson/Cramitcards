@@ -1,4 +1,4 @@
-var listItem1 = document.getElementById("1");
+var listItem1 = document.querySelectorAll(".list-group > li")[0];
     listItem1.classList.add("active");
 
 var oldCards = [];
