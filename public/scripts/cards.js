@@ -11,7 +11,7 @@ document.getElementById("list").addEventListener("click", (e) => {
     //get the card with the id that matches the selected list item
     var list_id = e.target.id;
     var targetCard_id = "card-id" + list_id;
-    var initCard = document.getElementById("card-id1-init");
+    var initCard = document.getElementById("init");
     var selectedCard = document.querySelector(`#${targetCard_id}`);
 
     //save the card that is displayed so we can hide it next time
