@@ -5,7 +5,7 @@
             <h5 id="list-head" class="lead"><%= deck.subject%></h5>
             <div id="list" class="list-group">
                 <% deck.cards.forEach((card) => { %>
-                    <li id="<%= card.card_id %>" class="list-group-item">Question <%= card.card_id %></li>
+                    <li id="<%= card.card_id %>" class="list-group-item">Question <%= card.card-id%></li>
                 <% }) %>
             </div>
             <p><a href="/decks">Choose Deck</a></p>
