@@ -28,8 +28,3 @@ document.getElementById("list").addEventListener("click", (e) => {
 
 });
 
-// document.querySelectorAll("#card-answer").forEach(element => {
-//     element.addEventListener("click", (e) => {
-        
-//     });
-// });
